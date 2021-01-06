@@ -1,8 +1,8 @@
 <?php
 
-class GW2_emb_Snip
+class GW2embeddings_Snip
 {
-    const PLUGIN_PREFIX = 'gw2_embeddings_';
+    const PLUGIN_PREFIX = 'GW2embeddings_';
     const SC_PREFIX = 'gw2emb_';
     const ATTS_PREFIX = 'data-armory-';
 
@@ -76,17 +76,17 @@ class GW2_emb_Snip
     */
 
     public static function require_sc_default(){
-      require_once self::$plugin_path . 'includes/shortcodes/class_gw2_emb_shortcode_default.php';
+      require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeDefault.php';
     }
 
     public static function require_sc_items(){
       self::require_sc_default();
-      require_once self::$plugin_path . 'includes/shortcodes/class_gw2_emb_shortcode_items.php';
+      require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeItems.php';
     }
 
     public static function require_sc_specs(){
       self::require_sc_default();
-      require_once self::$plugin_path . 'includes/shortcodes/class_gw2_emb_shortcode_specs.php';
+      require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeSpecs.php';
     }
 
 }

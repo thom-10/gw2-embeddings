@@ -4,7 +4,7 @@
  *  has some additions regarding item types and configurations
  */
 
-class GW2_emb_Shortcode_Items extends GW2_emb_Shortcode_Default
+class GW2embeddings_ShortcodeItems extends GW2embeddings_ShortcodeDefault
 {
     // secondary attributes
     protected $filter_array_sec = array(

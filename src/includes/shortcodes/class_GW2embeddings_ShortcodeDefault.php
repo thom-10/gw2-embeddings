@@ -3,7 +3,7 @@
  *  Basic embedding contructor class
  */
 
-class GW2_emb_Shortcode_Default
+class GW2embeddings_ShortcodeDefault
 {
     // primary attributes
     protected $filter_array_prim = array(

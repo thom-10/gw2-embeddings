@@ -5,8 +5,8 @@
  *
  * This class defines all code necessary to run during the plugin's activation.
  */
- 
-class GW2_Embeddings_Activator
+
+class GW2embeddings_Activator
 {
     private static $required_php;
     private static $required_wp;

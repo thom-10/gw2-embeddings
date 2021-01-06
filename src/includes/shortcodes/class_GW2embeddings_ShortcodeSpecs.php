@@ -4,7 +4,7 @@
  *  (i know. extremly exciting ;-)
  */
 
-class GW2_emb_Shortcode_Specs extends GW2_emb_Shortcode_Default
+class GW2embeddings_ShortcodeSpecs extends GW2embeddings_ShortcodeDefault
 {
     // primary attributes
     protected $filter_array_prim = array(

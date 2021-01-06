@@ -1,0 +1,6 @@
+{
+    "require": {
+        "gw2treasures/gw2api": "^3.7",
+        "gw2treasures/gw2tools": "^1.0"
+    }
+}
