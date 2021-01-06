@@ -7,20 +7,20 @@ class GW2embeddings_Snip
     const ATTS_PREFIX = 'data-armory-';
 
     const PRIMARY = array(
-  'type' => 'embed',
-  'id' => 'ids',
-  'text' => 'inline-text',
-  'size' => 'size',
-  'blank' => 'blank-text',
+      'type' => 'embed',
+      'id' => 'ids',
+      'text' => 'inline-text',
+      'size' => 'size',
+      'blank' => 'blank-text',
   );
 
     const SECONDARY = array(
-  'traits' => '-traits',
-  'skin' => '-skin',
-  'stat' => '-stat',
-  'infusions' => '-infusions',
-  'upgrade' => '-upgrades',
-  'count' => '-upgrade-count',
+      'traits' => '-traits',
+      'skin' => '-skin',
+      'stat' => '-stat',
+      'infusions' => '-infusions',
+      'upgrade' => '-upgrades',
+      'count' => '-upgrade-count',
   );
 
 
