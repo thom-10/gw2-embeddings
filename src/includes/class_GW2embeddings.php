@@ -2,7 +2,6 @@
 
 class GW2embeddings
 {
-
     public function __construct($plugin_file)
     {
         GW2embeddings_Snip::$plugin_path  =  plugin_dir_path($plugin_file);
@@ -15,6 +14,8 @@ class GW2embeddings
     // include essential files and load shortcodes
     private function load_includes()
     {
+        require GW2embeddings_Snip::$plugin_path . 'includes/composer/autoload.php';
+
         // load shortcode management class
         require_once GW2embeddings_Snip::$plugin_path . 'includes/class_GW2embeddings_Shortcode.php';
 
@@ -24,7 +25,6 @@ class GW2embeddings
 
     private function define_common_hooks()
     {
-
         /**
         * Register available shortcodes.
         */

@@ -1,3 +1,5 @@
 composer.phar
-vendor/
 composer.lock
+vendor/
+src/includes/composer
+!src/!includes/!composer/!readme.txt

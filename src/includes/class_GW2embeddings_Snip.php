@@ -49,44 +49,45 @@ class GW2embeddings_Snip
 
     public static function get_primary_att($type)
     {
-      if (isset(self::PRIMARY[$type])) {
-        $snippet = self::ATTS_PREFIX . self::PRIMARY[$type];
-        return $snippet;
-      }
+        if (isset(self::PRIMARY[$type])) {
+            $snippet = self::ATTS_PREFIX . self::PRIMARY[$type];
+            return $snippet;
+        }
 
-      return;
-
+        return;
     }
 
     public static function get_secondary_att($type, $id)
     {
-      if (isset(self::SECONDARY[$type])) {
-        if (ctype_digit($id)) {
-          $snippet = self::ATTS_PREFIX . $id . self::SECONDARY[$type];
-          return $snippet;
-        } else {
-          return 1;
+        if (isset(self::SECONDARY[$type])) {
+            if (ctype_digit($id)) {
+                $snippet = self::ATTS_PREFIX . $id . self::SECONDARY[$type];
+                return $snippet;
+            } else {
+                return 1;
+            }
         }
-      }
-      return;
+        return;
     }
 
     /**
     *   requirement calls for the shortcode handlers
     */
 
-    public static function require_sc_default(){
-      require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeDefault.php';
+    public static function require_sc_default()
+    {
+        require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeDefault.php';
     }
 
-    public static function require_sc_items(){
-      self::require_sc_default();
-      require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeItems.php';
+    public static function require_sc_items()
+    {
+        self::require_sc_default();
+        require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeItems.php';
     }
 
-    public static function require_sc_specs(){
-      self::require_sc_default();
-      require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeSpecs.php';
+    public static function require_sc_specs()
+    {
+        self::require_sc_default();
+        require_once self::$plugin_path . 'includes/shortcodes/class_GW2embeddings_ShortcodeSpecs.php';
     }
-
 }
