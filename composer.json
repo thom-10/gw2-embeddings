@@ -1,10 +1,11 @@
 {
   "config": {
-    "vendor-dir": "src/includes/composer"
+    "vendor-dir": "src/includes/vendor"
   },
   "require": {
     "gw2treasures/gw2api": "^3.7",
-    "gw2treasures/gw2tools": "^1.0"
+    "gw2treasures/gw2tools": "^1.0",
+    "cjstroud/classnames-php": "^1.0"
   },
   "require-dev": {
     "pagon/composer-packer": "^0.1.1"

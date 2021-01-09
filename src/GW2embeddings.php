@@ -21,8 +21,8 @@ if (! defined('WPINC'))
 
 function activate_GW2embeddings()
 {
-    require_once plugin_dir_path(__FILE__) . 'includes/class_GW2embeddings_Activator.php';
-    GW2embeddings_Activator::activate();
+    require_once plugin_dir_path(__FILE__) . 'includes/class_GW2emb_Activator.php';
+    GW2emb_Activator::activate();
 }
 
 register_activation_hook(__FILE__, 'activate_GW2embeddings');
@@ -34,12 +34,13 @@ register_activation_hook(__FILE__, 'activate_GW2embeddings');
 
 function run_GW2embeddings()
 {
-    // helper-class with code fragments and some shortcuts
-    require_once plugin_dir_path(__FILE__) . 'includes/class_GW2embeddings_Snip.php';
-    // main plugin class
-    require_once plugin_dir_path(__FILE__) . 'includes/class_GW2embeddings.php';
+    // composer autoload file
+    require_once plugin_dir_path(__FILE__) . 'includes/vendor/autoload.php';
 
-    $plugin = new GW2embeddings(__FILE__);
+    // main plugin class
+    require_once plugin_dir_path(__FILE__) . 'includes/class_GW2emb.php';
+
+    $plugin = new GW2emb(__FILE__);
 }
 
 run_GW2embeddings();

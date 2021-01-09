@@ -1,5 +1,7 @@
 composer.phar
 composer.lock
 vendor/
-src/includes/composer
-!src/!includes/!composer/!readme.txt
+src/includes/composer/**
+!src/includes/composer/readme.txt
+src/includes/UI_Snipptes.html
+**/old_*

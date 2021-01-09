@@ -3,7 +3,7 @@
 /**
  *  fires when file is loaded to add shortcode
  */
-GW2embeddings_Shortcodes::add('skills');
+GW2emb_Shortcodes::add('skills');
 
 /**
  *  called by Wordpress, if shortcode is used
@@ -11,7 +11,7 @@ GW2embeddings_Shortcodes::add('skills');
 function gw2emb_skills_handler($atts = [], $content, $tag)
 {
     // check dependencies
-    GW2embeddings_Snip::require_sc_default();
+    GW2emb::require_sc_default();
 
     // open new shortcode-instance
     $shortcode = new GW2embeddings_ShortcodeDefault($atts, $tag);
