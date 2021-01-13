@@ -30,8 +30,8 @@ class GW2emb_Shortcodes
 
     public static function check_scripts(){
         // check if scripts are added
-        wp_enqueue_script('GW2arm-locale.js', GW2emb::getPluginUrl('languages/js/gw2arm_locale.js'), null, null, true);
-        wp_enqueue_script('armory-embeds.js', "https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js", null, null, true);
+        //wp_enqueue_script('GW2arm-locale.js', GW2emb::getPluginUrl('languages/js/gw2arm_locale.js'), null, null, true);
+        //wp_enqueue_script('armory-embeds.js', "https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js", null, null, true);
 
 
   }
