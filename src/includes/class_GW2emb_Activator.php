@@ -6,7 +6,7 @@
  * This class defines all code necessary to run during the plugin's activation.
  */
 
-class GW2embe_Activator
+class GW2emb_Activator
 {
     private static $required_php;
     private static $required_wp;
@@ -16,7 +16,7 @@ class GW2embe_Activator
      */
     public static function activate()
     {
-        self::$required_php = '5.3';
+        self::$required_php = '5.5';
         self::$required_wp  = '4.5';
 
         self::check_php_version();

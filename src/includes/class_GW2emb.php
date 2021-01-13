@@ -2,12 +2,13 @@
 
 class GW2emb
 {
-    // Wrapper for Guild Wars 2 APi Requests
-    public const API = new \GW2Treasures\GW2Api\GW2Api();
-
-    // general info variables
+        // general info variables
     const PLUGIN_PREFIX = 'GW2embeddings_';
     const SC_PREFIX = 'gw2emb_';
+
+    // Wrapper for Guild Wars 2 APi Requests
+    public static $api;
+
 
     private static $pluginPath;
     private static $pluginUrl;
@@ -17,6 +18,7 @@ class GW2emb
     {
         self::$pluginPath  =  plugin_dir_path($pluginFile);
         self::$pluginUrl   =  plugin_dir_url($pluginFile);
+        self::$api = new \GW2Treasures\GW2Api\GW2Api();
 
         $this->loadIncludes();
         $this->defineHooks();
@@ -27,10 +29,10 @@ class GW2emb
     {
 
         // load shortcode management class
-        require_once $this->pluginPath . 'includes/class_GW2emb_Shortcodes.php';
+        require_once self::$pluginPath . 'includes/class_GW2emb_Shortcodes.php';
 
         // load available shortcodes
-        require_once $this->pluginPath . 'includes/shortcodes/0_include_shortcodes.php';
+        require_once self::$pluginPath . 'includes/shortcodes/0_include_shortcodes.php';
     }
 
     private function defineHooks()
@@ -49,7 +51,7 @@ class GW2emb
         return self::SC_PREFIX . $string;
     }
 
-    public static function getPluginDir($file = '')
+    public static function getPluginPath($file = '')
     {
         return self::$pluginPath . $file;
     }
