@@ -2,6 +2,9 @@
 
 /**
  *  Shortcode management class
+ *
+ *  collects available (implemented) shortcodes
+ *  and triggrs WP register hook function.
  */
 
 class GW2emb_Shortcodes

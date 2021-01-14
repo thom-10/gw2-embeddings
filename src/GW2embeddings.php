@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       GW2 Embeddings
  * Description:       Implements a shortcode for simplyfied use of the GW2 Armory embeddings
- * Version:           2.0_dev1
+ * Version:           2.0_dev30
  * Author:            thom-10 for guildnews.de
  * Author URI:        https://guildnews.de
  * License:           BSD-3 or later
@@ -15,10 +15,12 @@ if (! defined('WPINC'))
 }
 
 
-/*
- *  some checks during plugin activation
+/**
+ *  Function for the WP activation hook
+ *
+ *  requires the activator class which checks the environment
+ *  for all neccasary things to run the plugin.
  */
-
 function activate_GW2embeddings()
 {
     require_once plugin_dir_path(__FILE__) . 'includes/class_GW2emb_Activator.php';
@@ -29,9 +31,11 @@ register_activation_hook(__FILE__, 'activate_GW2embeddings');
 
 
 /*
- *  triggers the main plugin class
+ *  The actual plugin trigger
+ *
+ *  requires composer autoloader an the main plugin controler class,
+ *  creates class instance and thats it.
  */
-
 function run_GW2embeddings()
 {
     // composer autoload file
@@ -41,6 +45,7 @@ function run_GW2embeddings()
     require_once plugin_dir_path(__FILE__) . 'includes/class_GW2emb.php';
 
     $plugin = new GW2emb(__FILE__);
+
 }
 
 run_GW2embeddings();

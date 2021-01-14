@@ -1,12 +1,19 @@
 <?php
 
+ /**
+  *   Main plugin management class
+  *
+  *   loads essential requirements
+  *   stores basic plugin information
+  */
+
 class GW2emb
 {
-        // general info variables
+    // general info variables
     const PLUGIN_PREFIX = 'GW2embeddings_';
     const SC_PREFIX = 'gw2emb_';
 
-    // Wrapper for Guild Wars 2 APi Requests
+    // Wrapper for Guild Wars 2 API Requests
     public static $api;
 
 
@@ -24,7 +31,7 @@ class GW2emb
         $this->defineHooks();
     }
 
-    // include essential files and load shortcodes
+    /** Triggers basic requirements */
     private function loadIncludes()
     {
 
@@ -35,9 +42,9 @@ class GW2emb
         require_once self::$pluginPath . 'includes/shortcodes/0_include_shortcodes.php';
     }
 
+    /** Triggers WP hooks */
     private function defineHooks()
     {
-        // Call WP-Function to register available shortcodes.
         add_action('init', array( 'GW2emb_Shortcodes', 'register' ));
     }
 
