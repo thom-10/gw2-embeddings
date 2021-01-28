@@ -4,6 +4,11 @@ This is a Wordpress-plugin to make it easier to use the [`GW2 armory embeds`](ht
 It adds the shortcodes `[gw2emb_amulets] [gw2emb_items] [gw2emb_skills] [gw2emb_specs] [gw2emb_traits]` to wordpress.
 You have to fill in the attributes very similar to the original. See [`Armory-embeds-Storybook`](https://madou.github.io/armory-embeds) for detailed information.
 
+# v2 Todo
+
+- Blocked until gw2-treasures-fork is ready to use
+- Need to learn laravel
+
 # Cheatsheet
 
 You have to add the needed options similar to the original GW2 Armory Embeddings.
