@@ -8,12 +8,17 @@
  * License:           BSD-3 or later
  * License URI:       https://opensource.org/licenses/BSD-3-Clause
  */
+namespace thom10\GW2emb;
 
 if (! defined('WPINC'))
 {
     die;
 }
 
+/**
+ *  Composer Autoload
+ */
+require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
 
 /**
  *  Function for the WP activation hook
@@ -23,29 +28,14 @@ if (! defined('WPINC'))
  */
 function activate_GW2embeddings()
 {
-    require_once plugin_dir_path(__FILE__) . 'includes/class_GW2emb_Activator.php';
-    GW2emb_Activator::activate();
-}
+  use thom10\GW2emb\Shortcodes\Activator;
+  use thom10\GW2emb\Shortcodes\GW2emb;
 
-register_activation_hook(__FILE__, 'activate_GW2embeddings');
-
-
-/*
- *  The actual plugin trigger
- *
- *  requires composer autoloader an the main plugin controler class,
- *  creates class instance and thats it.
- */
-function run_GW2embeddings()
-{
-    // composer autoload file
-    require_once plugin_dir_path(__FILE__) . 'includes/vendor/autoload.php';
-
-    // main plugin class
-    require_once plugin_dir_path(__FILE__) . 'includes/class_GW2emb.php';
-
+  if (\thom10\GW2emb\Activator::activate()) {
     $plugin = new GW2emb(__FILE__);
+  }
 
 }
 
-run_GW2embeddings();
+$gw2emb_activate_callable = '\thom10\GW2emb\Shortcodes\Activator::fire';
+register_activation_hook(__FILE__, $gw2emb_activate_callable);

@@ -1,5 +1,7 @@
 <?php
 
+namespace thom10\GW2emb\Includes;
+
 /**
  *  Shortcode management class
  *
@@ -7,19 +9,27 @@
  *  and triggrs WP register hook function.
  */
 
-class GW2emb_Shortcodes
+class Shortcodes
 {
 
     private static $shortcodes = [];
 
-
-    // triggered by each shortcode file
-    public static function add($data)
+    /**
+     *  Shortcode-tag aggregator
+     *
+     *  triggered by the individual sc-files
+     *  @param String $data shortcode-name/tag
+     */
+    public static function append($data)
     {
         self::$shortcodes[ $data ] = $data.'_handler';
     }
 
-    // init-function for wordpress
+    /**
+     *  Shortcode register function
+     *
+     *  triggers WP-Function to add each Shortcode to Wordpress
+     */
     public static function register()
     {
         $prefix = GW2emb::getScPRefix();
@@ -30,12 +40,4 @@ class GW2emb_Shortcodes
             add_shortcode($prefix . $tag, $prefix . $callback);
         }
     }
-
-    public static function check_scripts(){
-        // check if scripts are added
-        //wp_enqueue_script('GW2arm-locale.js', GW2emb::getPluginUrl('languages/js/gw2arm_locale.js'), null, null, true);
-        //wp_enqueue_script('armory-embeds.js', "https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js", null, null, true);
-
-
-  }
 }

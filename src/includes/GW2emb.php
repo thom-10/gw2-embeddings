@@ -1,5 +1,7 @@
 <?php
 
+namespace thom10\GW2emb\Includes;
+
  /**
   *   Main plugin management class
   *
@@ -29,17 +31,6 @@ class GW2emb
 
         $this->loadIncludes();
         $this->defineHooks();
-    }
-
-    /** Triggers basic requirements */
-    private function loadIncludes()
-    {
-
-        // load shortcode management class
-        require_once self::$pluginPath . 'includes/class_GW2emb_Shortcodes.php';
-
-        // load available shortcodes
-        require_once self::$pluginPath . 'includes/shortcodes/0_include_shortcodes.php';
     }
 
     /** Triggers WP hooks */

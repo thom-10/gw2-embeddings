@@ -1,12 +1,14 @@
 <?php
 
+namespace thom10\GW2emb\Includes;
+
 /**
  * Fired during plugin activation.
  *
  * This class defines all code necessary to run during the plugin's activation.
  */
 
-class GW2emb_Activator
+class Activator
 {
     private static $required_php;
     private static $required_wp;
@@ -14,13 +16,15 @@ class GW2emb_Activator
     /**
      * Plugin activation.
      */
-    public static function activate()
+    public static function fire()
     {
-        self::$required_php = '5.5';
+        self::$required_php = '7.2';
         self::$required_wp  = '4.5';
 
         self::check_php_version();
         self::check_wp_version();
+
+        return true;
     }
 
     /**

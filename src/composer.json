@@ -6,11 +6,11 @@
   },
   "repositories": [{
       "type": "vcs",
-      "url": "./dev-depend/gw2api"
+      "url": "./vendor_dev/gw2api"
     },
     {
       "type": "vcs",
-      "url": "./dev-depend/gw2tools"
+      "url": "./vendor_dev/gw2tools"
     }
   ],
   "autoload": {

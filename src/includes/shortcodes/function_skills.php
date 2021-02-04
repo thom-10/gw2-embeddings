@@ -1,9 +1,11 @@
 <?php
 
+use thom10\GW2emb\Shortcodes;
+
 /**
  *  fires when file is loaded to add shortcode
  */
-GW2emb_Shortcodes::add('skills');
+Shortcodes::append('skills');
 
 /**
  *  called by Wordpress, if shortcode is used

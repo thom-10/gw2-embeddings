@@ -1,7 +1,7 @@
 composer.phar
 composer.lock
 vendor/
-!src/includes/vendor/readme.txt
+build/
 tests/wordpress/**
 !tests/wordpress/uploads.ini
 **/old_*
